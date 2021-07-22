@@ -3,6 +3,7 @@ package ru.geekbrains.lesson.two;
 import java.util.Random;
 
 public class Main {
+
     //region Задание № 1
     public static void doFirstArr() {
         int[] firstArr = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
@@ -44,7 +45,7 @@ public class Main {
         int[] thirdArr = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
         System.out.println("Задание № 3.");
         System.out.println("Первоначальный массив: ");
-        for (int j = 0; j < 10; j++){
+        for (int j = 0; j < thirdArr.length; j++){
             System.out.print(thirdArr[j] + " ");
         }
         System.out.println();
@@ -85,8 +86,47 @@ public class Main {
         Random factor = new Random();
         int[] fifthArr = new int[10];
         System.out.println("Задание № 5.");
+        System.out.printf("Инициализируем массив длинной %d: %n", fifthArr.length);
+        for (int i = 0; i < fifthArr.length; i++) {
+            fifthArr[i] = factor.nextInt(10);
+            System.out.print(fifthArr[i] + " ");
+        }
+        int min = fifthArr[0];
+        int max = fifthArr[0];
+        for (int i = 0; i < fifthArr.length; i++) {
+            if (fifthArr[i] > max) {
+                max = fifthArr[i];
+            }
+        }
+        for (int i = 0; i < fifthArr.length; i++) {
+            if (fifthArr[i] < min) {
+                min = fifthArr[i];
+            }
+        }
+        System.out.println();
+        System.out.println("Минимальное число: " + min);
+        System.out.println("Максимальное число: " + max);
+        System.out.println("Завершение задания № 5.");
+    }
+    //endregion
+    //region Задание № 6
+    public static void doSixthArr() {
+        Random factor = new Random();
+        int[] sixthArr = new int[16];
+        System.out.println("Задание № 6.");
+        System.out.printf("Инициализируем массив длинной %d: %n", sixthArr.length);
+        for (int i = 0; i < sixthArr.length; i++) {
+            sixthArr[i] = factor.nextInt(10);
+            System.out.print(sixthArr[i] + " ");
+        }
 
     }
+    //endregion
+    //region Задание № 7
+    public static void doSeventhArr() {
+
+    }
+    //endregion
     public static void main(String[] args) {
         doFirstArr();
         System.out.println("====================");
@@ -95,6 +135,8 @@ public class Main {
         doThirdArr();
         System.out.println("====================");
         doFourthArr();
+        System.out.println("====================");
+        doFifthArr();
         System.out.println("====================");
     }
 }
